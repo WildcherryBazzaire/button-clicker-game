@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Button Clicker </title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed" rel="stylesheet">
+    </head>
+    <body>
+
+        <div id="scoreBox"> 
+
+            <p id="scoreText"> </p>
+        
+        </div>
+
+        <div id="MainDiv">
+
+            <div id="scoreButton"> 
+
+                <p> Increment Me DADDY! </p>
+                <p>+1</p>
+            </div>
+
+            <div id="surpriseBox">
+                <p id="surpriseTitle"> Surprise text for everything divisble by ten</p>
+                
+                <div id= "surpriseContainer">
+
+                </div>
+            </div>
+
+            <div id="resetButton">
+                <p>reset</p>
+            </div>
+
+            <div id="resetSure">
+                <p> Are You Sure You Want To Reset?</p>
+                <button onclick="Reset()" id="marginEdit"> Yes </button>
+                <button onclick="NoReset()"> NO </button>
+            </div>
+
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
