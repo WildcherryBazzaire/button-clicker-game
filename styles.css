@@ -159,3 +159,11 @@ html,body {
     cursor: pointer;
     font-size: 1em;
 }
+
+#hidden_sounds1 {
+    display:none;
+}
+
+#hidden_sounds2 {
+    display:none;
+}

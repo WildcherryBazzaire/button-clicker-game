@@ -14,6 +14,9 @@ var resetConfirm = document.getElementById("resetSure");
 
 var surpriseContainer = document.getElementById("surpriseContainer");
 
+var audioForWoomies = document.getElementById("hidden_sounds1");
+var audioForVeemos = document.getElementById("hidden_sounds2");
+
 /* variables end */
 
 
@@ -32,14 +35,21 @@ button.addEventListener("click", function(){
 
     scoreText.innerHTML = localStorage.score; //displays incremented score
     
-    if((parseInt(localStorage.score) % 10 == 0) && (parseInt(localStorage.score) !== 100) && (parseInt(localStorage.score) !== 420))
+    if((parseInt(localStorage.score) % 10 == 0) && (parseInt(localStorage.score) !== 100) && (parseInt(localStorage.score) !== 420)) {
+        audioForWoomies.play();
         Surprises(parseInt(localStorage.score)); //guds for reaching a certain score
-    else if(parseInt(localStorage.score) === 69) //sexy Easter Egg
+    } else if(parseInt(localStorage.score) === 69) { //sexy Easter Egg
+        audioForVeemos.play();
         EasterEggs(69);
-    else if(parseInt(localStorage.score) === 100) //You missed some
+    }
+    else if(parseInt(localStorage.score) === 100) { //You missed some
+        audioForVeemos.play();
         EasterEggs(100);
-    else if(parseInt(localStorage.score) === 420)
+    }
+    else if(parseInt(localStorage.score) === 420) {
+        audioForVeemos.play();
         EasterEggs(420);
+    }
 });
 
 //event listener for Reset Button 
@@ -50,8 +60,10 @@ resetButton.addEventListener("click", function() {
 //event listener for people with 5000 iq
 scoreText.addEventListener("click", function() {
     ascendingLevels++;
-    if(ascendingLevels % 20 === 0)
+    if(ascendingLevels % 20 === 0) {
+        audioForVeemos.play();
         EasterEggs("CODENAME_ascended");
+    }
 })
 
 function Surprises(score) {
